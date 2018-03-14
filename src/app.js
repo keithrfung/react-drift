@@ -1,10 +1,14 @@
 import autobind from 'autobind-decorator'
 import React from 'react'
+import { Style } from 'radium'
 
 import Carousel from './carousel'
 import Frame from './frame'
 import Nav from './nav'
 import Slide from './slide'
+
+import styles from './app-styles'
+import stylesConfig from './config-styles'
 
 @autobind
 export default class DriftApp extends React.Component {
@@ -29,7 +33,8 @@ export default class DriftApp extends React.Component {
   render() {
     return (
       <Frame>
-        <Carousel showIndex={this.state.showIndex} nav={this.renderNav()} width={640}>
+        <Style rules={styles} />
+        <Carousel showIndex={this.state.showIndex} nav={this.renderNav()} width={stylesConfig.imageWidth}>
           <Slide image={require('./images/1.jpg')} title="Imperial Mockery">
             In a show of defiance, rebels have again made mockery of the majesty that is service to the Empire.
             These objects were immediately removed from the reflecting pool in Coruscant's Central Square when found
