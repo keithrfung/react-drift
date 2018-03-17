@@ -22,11 +22,11 @@ module.exports = {
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }, {
-      test: /\.jpg/, 
+      test: /\.jpg/,
       loader: 'file'
     }, {
-      test: /\.css/, 
-      loader: ['style', 'css', 'cssnext']
+      test: /\.css/,
+      loaders: ['style', 'css', 'cssnext']
     }]
   }
 }
