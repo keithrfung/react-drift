@@ -24,6 +24,9 @@ module.exports = {
     }, {
       test: /\.jpg/, 
       loader: 'file'
+    }, {
+      test: /\.css/, 
+      loader: ['style', 'css', 'cssnext']
     }]
   }
 }
